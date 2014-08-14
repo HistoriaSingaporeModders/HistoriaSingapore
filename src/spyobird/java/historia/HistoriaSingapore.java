@@ -1,9 +1,11 @@
 package spyobird.java.historia;
 
+import java.io.File;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import spyobird.java.historia.util.Data;
-import spyobird.java.historia.util.ModData;
+import spyobird.java.historia.util.Init;
 import spyobird.java.historia.util.config.ConfigHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -22,22 +24,16 @@ public class HistoriaSingapore
 	
 	@SidedProxy(clientSide = Data.ModData.CLIENT_PROXY_LOCATION, serverSide = Data.ModData.COMMON_PROXY_LOCATION)
 	public static CommonProxy proxy;
-
-	public static CreativeTabs tabs = new CreativeTabs("historiaSingapore")
-	{
-		@Override
-		public Item getTabIconItem()
-		{
-			return Item.getItemById(256);
-		}
-	};	
 	
 	public static ConfigHandler config;
 
 	@EventHandler
 	public void preLoad(FMLPreInitializationEvent event)
 	{
-		
+		config.load(new File(event.getModConfigurationDirectory() + "/Historia.cfg"));
+		Init.BlockInit.load();
+		Init.ItemInit.load();
+		Init.MiscInit.load();
 	}
 	
 	@EventHandler
@@ -49,6 +45,6 @@ public class HistoriaSingapore
 	@EventHandler
 	public static void postLoad(FMLPostInitializationEvent event)
 	{
-		LanguageRegistry.instance().addStringLocalization("itemGroup.historiaSingapore", "en_US", "Historia Singapore");
+		
 	}
 }

@@ -19,7 +19,9 @@ public class Data
 	}	
 	public static class BlockData
 	{
-		
+		public static final String TIN_ORE_KEY = "TinOre";
+		public static final String TIN_ORE_LOCAL = "Tin Ore";
+		public static final String TIN_ORE_TEXTURE = "icontinore";
 	}
 	
 	public static class ItemData

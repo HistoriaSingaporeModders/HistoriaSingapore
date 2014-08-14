@@ -8,7 +8,7 @@ public class ConfigHandler
 {
 	public static Configuration config;
 	
-	public static void loadConfig(File file)
+	public static void load(File file)
 	{
 		if (config == null)
 			config = new Configuration(file);
