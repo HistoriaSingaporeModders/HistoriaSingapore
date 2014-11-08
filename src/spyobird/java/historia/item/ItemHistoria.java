@@ -1,4 +1,4 @@
-package spyobird.java.historia.block;
+package spyobird.java.historia.item;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -8,22 +8,23 @@ import spyobird.java.historia.util.Init;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.item.Item;
 
-public class BlockHistoria extends Block
+public class ItemHistoria extends Item
 {
 	public String textureName;
 	
-	protected BlockHistoria(Material material, String textureName)
+	protected ItemHistoria(String textureName)
 	{
-		super(material);
+		super();
 		this.textureName = textureName;
 		this.setCreativeTab(Init.MiscInit.tabs);
 	}
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void registerBlockIcons(IIconRegister register)
+	public void registerIcons(IIconRegister register)
 	{
-        blockIcon = register.registerIcon(Data.ModData.TEXTURE_LOCATION + ":" + this.textureName);
+        itemIcon = register.registerIcon(Data.ModData.TEXTURE_LOCATION + ":" + textureName);
 	}
 }

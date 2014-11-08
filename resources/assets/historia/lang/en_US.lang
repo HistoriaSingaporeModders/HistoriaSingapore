@@ -1,2 +1,7 @@
 itemGroup.historiaSingapore=Historia Singapore
-item.historia:TinOre=Tin Ore
+
+tile.TinOre.name=Tin Ore
+tile.EdgedGlass.name=Edged Glass
+
+item.Historiapedia.name=Historiapedia
+item.BananaMoney.name=Banana Money
