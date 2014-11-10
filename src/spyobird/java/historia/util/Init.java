@@ -8,6 +8,9 @@ import spyobird.java.historia.block.BlockEdgedGlass;
 import spyobird.java.historia.block.BlockTinOre;
 import spyobird.java.historia.item.ItemBananaMoney;
 import spyobird.java.historia.item.ItemHistoriapedia;
+import spyobird.java.historia.item.itemblock.ItemBlockEdgedGlass;
+import spyobird.java.historia.item.itemblock.ItemBlockTinOre;
+import spyobird.java.historia.util.config.ConfigHandler;
 import cpw.mods.fml.common.registry.GameData;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -22,11 +25,11 @@ public class Init
 		
 		public static void load()
 		{
-			registry.addObject(700, Data.BlockData.TIN_ORE_KEY, oreTin);
-			registry.addObject(701, Data.BlockData.EDGED_GLASS_KEY, edgedGlass);
+			registry.addObject(ConfigHandler.BlockConfig.TIN_ORE_ID, Data.BlockData.TIN_ORE_KEY, oreTin);
+			registry.addObject(ConfigHandler.BlockConfig.EDGED_GLASS_ID, Data.BlockData.EDGED_GLASS_KEY, edgedGlass);
 			
-			GameRegistry.registerBlock(oreTin, Data.BlockData.TIN_ORE_KEY);
-			GameRegistry.registerBlock(edgedGlass, Data.BlockData.EDGED_GLASS_KEY);
+			GameRegistry.registerBlock(oreTin, ItemBlockTinOre.class, Data.BlockData.TIN_ORE_KEY);
+			GameRegistry.registerBlock(edgedGlass, ItemBlockEdgedGlass.class, Data.BlockData.EDGED_GLASS_KEY);
 		}
 	}
 	
@@ -39,8 +42,8 @@ public class Init
 		
 		public static void load()
 		{
-			registry.addObject(5999, Data.ItemData.HISTORIAPEDIA_KEY, historiapedia);
-			registry.addObject(6000, Data.ItemData.BANANA_MONEY_KEY, bananaMoney);
+			registry.addObject(ConfigHandler.ItemConfig.HISTORIAPEDIA_ID, Data.ItemData.HISTORIAPEDIA_KEY, historiapedia);
+			registry.addObject(ConfigHandler.ItemConfig.BANANA_MONEY_ID, Data.ItemData.BANANA_MONEY_KEY, bananaMoney);
 			
 			GameRegistry.registerItem(historiapedia, Data.ItemData.HISTORIAPEDIA_KEY);
 			GameRegistry.registerItem(bananaMoney, Data.ItemData.BANANA_MONEY_KEY);
@@ -54,7 +57,7 @@ public class Init
 			@Override
 			public Item getTabIconItem()
 			{
-				return Item.getItemById(256);
+				return Item.getItemById(ConfigHandler.ItemConfig.HISTORIAPEDIA_ID);
 			}
 		};
 		

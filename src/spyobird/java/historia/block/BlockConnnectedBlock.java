@@ -41,7 +41,7 @@ public class BlockConnnectedBlock extends BlockHistoria
 	
 	@Override
 	@SideOnly(Side.CLIENT)
-    public IIcon getIcon(IBlockAccess blockaccess, int x, int y, int z, int side)
+	public IIcon getIcon(IBlockAccess blockaccess, int x, int y, int z, int side)
     {	
 		Block block = blockaccess.getBlock(x, y, z);
 		
