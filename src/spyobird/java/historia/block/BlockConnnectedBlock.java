@@ -46,7 +46,7 @@ public class BlockConnnectedBlock extends BlockHistoria
 		Block block = blockaccess.getBlock(x, y, z);
 		
 		ForgeDirection off = ForgeDirection.getOrientation(side);
-		if(blockaccess.getBlock(x + off.offsetX, y + off.offsetY, z + off.offsetZ) == block)
+		if (blockaccess.getBlock(x + off.offsetX, y + off.offsetY, z + off.offsetZ) == block)
 				return blankIcon;
 		
 		int index = 0;
@@ -55,7 +55,7 @@ public class BlockConnnectedBlock extends BlockHistoria
 		
 		for (int i = 0; i < dir.length; i++)
 		{
-			if(blockaccess.getBlock(x + dir[i].offsetX, y + dir[i].offsetY, z + dir[i].offsetZ) == block)
+			if (blockaccess.getBlock(x + dir[i].offsetX, y + dir[i].offsetY, z + dir[i].offsetZ) == block)
 			{
 				index |= 1 << i;
 			}
