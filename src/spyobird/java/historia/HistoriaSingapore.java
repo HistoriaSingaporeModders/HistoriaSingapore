@@ -2,11 +2,11 @@ package spyobird.java.historia;
 
 import java.io.File;
 
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
 import spyobird.java.historia.util.Data;
 import spyobird.java.historia.util.Init;
 import spyobird.java.historia.util.config.ConfigHandler;
+import spyobird.java.historia.util.oredict.ModOreDict;
+import spyobird.java.historia.util.oredict.ModOreDictRecipes;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -14,7 +14,6 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 
 @Mod(modid = Data.ModData.ID, name = Data.ModData.NAME, version = Data.ModData.VERSION)
 public class HistoriaSingapore
@@ -45,6 +44,7 @@ public class HistoriaSingapore
 	@EventHandler
 	public static void postLoad(FMLPostInitializationEvent event)
 	{
-		
+		ModOreDict.load();
+		ModOreDictRecipes.load();
 	}
 }
