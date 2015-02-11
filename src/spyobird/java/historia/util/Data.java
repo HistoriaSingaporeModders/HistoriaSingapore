@@ -13,6 +13,7 @@ public class Data
 		
 		//paths
 		public static final String TEXTURE_LOCATION = ID;
+		public static final String ENTITY_TEXTURE_LOCATION = ID + ":/textures/entity/";
 		public static final String COMMON_PROXY_LOCATION = "spyobird.java.historia.CommonProxy";
 		public static final String CLIENT_PROXY_LOCATION = "spyobird.java.historia.ClientProxy";
 		

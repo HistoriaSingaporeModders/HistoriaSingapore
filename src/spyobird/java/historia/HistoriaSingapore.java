@@ -38,7 +38,8 @@ public class HistoriaSingapore
 	@EventHandler
 	public void load(FMLInitializationEvent event)
 	{
-		
+		proxy.registerRendering();
+		proxy.registerEntities();
 	}
 	
 	@EventHandler
