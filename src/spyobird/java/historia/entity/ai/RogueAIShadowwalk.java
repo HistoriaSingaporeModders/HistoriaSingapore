@@ -27,7 +27,6 @@ public class RogueAIShadowwalk extends EntityAIBase
 		}
 		else
 		{
-			System.out.println("shouldExecute true");
 			double d = this.entity.getDistanceSqToEntity(this.target);
             return d >= 36.0D && d <= 256.0D;
 		}
@@ -36,7 +35,6 @@ public class RogueAIShadowwalk extends EntityAIBase
 	@Override
 	public void startExecuting()
 	{
-		System.out.println("startExecute");
 		this.entity.setPosition(this.target.posX, this.target.posY, this.target.posZ);
 	}
 	
