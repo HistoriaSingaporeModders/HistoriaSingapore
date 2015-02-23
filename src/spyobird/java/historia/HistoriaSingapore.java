@@ -2,8 +2,10 @@ package spyobird.java.historia;
 
 import java.io.File;
 
+import net.minecraftforge.common.MinecraftForge;
 import spyobird.java.historia.util.Data;
 import spyobird.java.historia.util.Init;
+import spyobird.java.historia.util.ModEventHandler;
 import spyobird.java.historia.util.config.ConfigHandler;
 import spyobird.java.historia.util.oredict.ModOreDict;
 import spyobird.java.historia.util.oredict.ModOreDictRecipes;
@@ -30,9 +32,9 @@ public class HistoriaSingapore
 	public void preLoad(FMLPreInitializationEvent event)
 	{
 		config.load(new File(event.getModConfigurationDirectory() + "/Historia.cfg"));
+		Init.MiscInit.load();
 		Init.BlockInit.load();
 		Init.ItemInit.load();
-		Init.MiscInit.load();
 	}
 	
 	@EventHandler
@@ -47,5 +49,7 @@ public class HistoriaSingapore
 	{
 		ModOreDict.load();
 		ModOreDictRecipes.load();
+		
+		MinecraftForge.EVENT_BUS.register(new ModEventHandler());
 	}
 }

@@ -2,6 +2,10 @@ itemGroup.historiaSingapore=Historia Singapore
 
 tile.TinOre.name=Tin Ore
 tile.EdgedGlass.name=Edged Glass
+tile.Tapioca.name=Tapioca
 
 item.Historiapedia.name=Historiapedia
 item.BananaMoney.name=Banana Money
+item.StaffOfDivination.name=Staff Of Divination
+
+entity.historia.Rogue.name=Rogue

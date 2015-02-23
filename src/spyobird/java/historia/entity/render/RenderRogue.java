@@ -8,7 +8,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class RenderRogue extends RenderLiving
 {
-	private final ResourceLocation texture = new ResourceLocation(Data.ModData.ENTITY_TEXTURE_LOCATION + "mobs/iconrogue.png");
+	private final ResourceLocation texture = new ResourceLocation(Data.ModData.ID, Data.ModData.ENTITY_TEXTURE_LOCATION + "mobs/iconrogue.png");
 	
 	public RenderRogue(ModelBase model, float shadow)
 	{
