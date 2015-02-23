@@ -1,5 +1,9 @@
 package spyobird.java.historia.util;
 
+import java.util.HashMap;
+import java.util.UUID;
+
+import spyobird.java.historia.lib.EnumRace;
 import net.minecraftforge.common.util.ForgeDirection;
 
 public class Data
@@ -13,7 +17,7 @@ public class Data
 		
 		//paths
 		public static final String TEXTURE_LOCATION = ID;
-		public static final String ENTITY_TEXTURE_LOCATION = ID + ":/textures/entity/";
+		public static final String ENTITY_TEXTURE_LOCATION = "textures/entity/";
 		public static final String COMMON_PROXY_LOCATION = "spyobird.java.historia.CommonProxy";
 		public static final String CLIENT_PROXY_LOCATION = "spyobird.java.historia.ClientProxy";
 		
@@ -29,6 +33,10 @@ public class Data
 		public static final String EDGED_GLASS_KEY = "EdgedGlass";
 		public static final String EDGED_GLASS_LOCAL = "Edged Glass";
 		public static final String EDGED_GLASS_TEXTURE = "iconedgedglass";
+		
+		public static final String TAPIOCA_KEY = "Tapioca";
+		public static final String TAPIOCA_LOCAL = "Tapioca";
+		public static final String TAPIOCA_TEXTURE = "icontapioca";
 	}
 	
 	public static class ItemData
@@ -40,10 +48,19 @@ public class Data
 		public static final String BANANA_MONEY_KEY = "BananaMoney";
 		public static final String BANANA_MONEY_LOCAL = "Banana Money";
 		public static final String BANANA_MONEY_TEXTURE = "iconbananamoney";
+		
+		public static final String STAFF_OF_DIVINATION_KEY = "StaffOfDivination";
+		public static final String STAFF_OF_DIVINATION_LOCAL = "Staff Of Divination";
+		public static final String STAFF_OF_DIVINATION_TEXTURE = "iconstaffofdivination";
 	}
 	
 	public static class MiscData
 	{
+		public static final String POTION_FILTH_KEY = "potionFilth";
+		public static final String POTION_GRIME_KEY = "potionGrime";
+		public static final String POTION_DECAY_KEY = "potionDecay";
+		public static final String POTION_YUCK_KEY = "potionYuck";
+		
 		public static final String BLANK_ICON_TEXTURE = "iconblankicon";
 		
 		public static final ForgeDirection DOWN = ForgeDirection.DOWN;
@@ -94,5 +111,7 @@ public class Data
 					return null;
 			}
 		}
+		
+		public static HashMap<UUID, EnumRace> raceMap = new HashMap();
 	}
 }

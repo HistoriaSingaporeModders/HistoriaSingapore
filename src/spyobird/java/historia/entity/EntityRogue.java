@@ -11,6 +11,7 @@ import net.minecraft.entity.ai.EntityAIWander;
 import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 import spyobird.java.historia.entity.ai.RogueAIShadowwalk;
@@ -59,4 +60,10 @@ public class EntityRogue extends EntityMob
 	{
 		return true;
 	}
+	
+	@Override
+    protected void dropRareDrop(int par)
+    {
+        this.dropItem(Items.golden_apple, 1);
+    }
 }
